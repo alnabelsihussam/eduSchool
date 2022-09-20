@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/dashborad/admins', function () {
+    return view('admin.admins');
+});
+
+Route::get('/dashborad/new', function () {
+    return view('admin.new');
+});
