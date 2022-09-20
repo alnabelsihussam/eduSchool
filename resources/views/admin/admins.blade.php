@@ -17,7 +17,7 @@ new page
 @endsection
 
 @section('content')
-    <h2> new page</h2>
+    <h2> new page11</h2>
 
 
     <div class="card card-primary card-outline">
