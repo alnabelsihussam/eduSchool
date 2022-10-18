@@ -18,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 require __DIR__.'/auth.php';
