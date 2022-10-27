@@ -19,14 +19,27 @@
             </div>
 
 
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger mt-2">
+                        {{ $error }}
+
+                    </div>
+                @endforeach()
+            @endif
+
+
+
+
             <form method="post" action="{{ route('cats.store') }}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name">Name </label>
-                        <input type="text" name="name" class="form-control" id="name"
+                        <input type="text" name="name" value="{{ old('name') }}" class="form-control" id="name"
                             placeholder="Enter Category Name">
                     </div>
+
 
                     <div class="col-sm-6">
 
