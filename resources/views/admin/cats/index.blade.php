@@ -41,6 +41,9 @@
                                 <th>ID</th>
                                 <th>Name </th>
                                 <th>Status</th>
+                                <th>Create at</th>
+                                <th colspan="2" class="text-center">Action</th>
+
 
                             </tr>
                         </thead>
@@ -56,6 +59,20 @@
                                             {{ 'not active' }}
                                         @endif
                                     </td>
+                                    <td>{{ $cat->created_at }}</td>
+                                    <td>
+                                        <a href="{{ route('cats.edit', $cat->id) }}" class="btn btn-outline-info">
+                                            Update</a>
+                                    </td>
+                                    <td>
+                                        <form method="POST" action="{{ route('cats.destroy', $cat->id) }}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+
+                                        </form>
+                                    </td>
+
                                 </tr>
                             @empty
 

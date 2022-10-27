@@ -65,7 +65,8 @@ class CatsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cat = Cat::FindOrFail($id);
+        return view('admin.cats.edit',compact('cat'));
     }
 
     /**
@@ -77,7 +78,10 @@ class CatsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cat = Cat::FindOrFail($id);
+        $cat->update($request->all());
+        return redirect()->route('cats.index');
+
     }
 
     /**
@@ -88,6 +92,7 @@ class CatsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cat::destroy($id);
+        return redirect()->route('cats.index');
     }
 }
