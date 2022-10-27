@@ -1,27 +1,27 @@
 @extends('admin.layouts.master')
 @section('title')
-    New Category
+    Archive Category
 @endsection
 @section('page_name')
-    Add Category
+    Archive Category
 @endsection
 @section('main_page')
     Category
 @endsection
 @section('sub_page')
-    Add
+    Archive
 @endsection
 @section('content')
     <div class="card-footer">
 
-        <a href="{{ route('cats.create') }}" type="submit" class="btn btn-outline-info">Create Category </a>
+        {{-- <a href="{{ route('cats.create') }}" type="submit" class="btn btn-outline-info">Create Category </a> --}}
     </div>
 
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Category Table</h3>
+                    <h3 class="card-title"> Archive Category Table</h3>
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -60,17 +60,15 @@
                                         @endif
                                     </td>
                                     <td>{{ $cat->created_at }}</td>
-                                    <td>
-                                        <a href="{{ route('cats.edit', $cat->id) }}" class="btn btn-outline-info">
-                                            Update</a>
-                                    </td>
-                                    <td>
-                                        <form method="POST" action="{{ route('cats.destroy', $cat->id) }}">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-outline-danger">Delete</button>
 
-                                        </form>
+                                    <td>
+                                        <a href="{{ route('cats.restore', $cat->id) }}" class="btn btn-outline-info">
+                                            Restore</a>
+                                    </td>
+
+                                    <td>
+                                        <a href="{{ route('cats.force', $cat->id) }}" class="btn btn-outline-danger">
+                                            Delete</a>
                                     </td>
 
                                 </tr>

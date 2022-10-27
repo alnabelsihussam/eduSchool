@@ -90,6 +90,31 @@ class CatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+     public function archive(){
+
+        $cats = Cat::onlyTrashed()->get();
+        return view('admin.cats.archive',compact('cats'));
+     }
+
+     public function restore($id){
+
+        $cats = Cat::withTrashed()->findOrFail($id)->restore();
+
+        return redirect()->route('cats.index');
+     }
+
+     public function force($id){
+
+        $cats = Cat::onlyTrashed()->findOrFail($id)->forceDelete();
+
+        return redirect()->route('cats.archive');
+     }
+
+
+
+
     public function destroy($id)
     {
         Cat::destroy($id);
