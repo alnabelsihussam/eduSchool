@@ -13,7 +13,9 @@
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
                         <div class="courses_banner">
-                            <a href="#"> <img {{ asset('web/assets/images/courses/courses_1.jpg') }}"
+
+
+                            <a href="#"> <img src="{{ asset('web/assets/images/courses/courses_1.jpg') }}"
                                     alt=""class="img-fluid"></a>
                         </div>
                         <div class="purchase_price">
@@ -43,7 +45,7 @@
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
                         <div class="courses_banner"><a href="#"><img
-                                    {{ asset('web/assets/images/courses/courses_2.jpg') }}" alt=""
+                                    src="{{ asset('web/assets/images/courses/courses_2.jpg') }}" alt=""
                                     class="img-fluid"></a></div>
                         <div class="purchase_price">
                             <a href="#" class="read_more-btn">Free</a>
@@ -70,7 +72,7 @@
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
                         <div class="courses_banner"><a href="#"><img
-                                    {{ asset('web/assets/images/courses/courses_3.jpg') }}" alt=""
+                                    src="{{ asset('web/assets/images/courses/courses_3.jpg') }}" alt=""
                                     class="img-fluid"></a></div>
                         <div class="purchase_price">
                             <a href="#" class="read_more-btn">120$</a>
@@ -97,7 +99,7 @@
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
                         <div class="courses_banner"><a href="#"><img
-                                    {{ asset('web/assets/images/courses/courses_4.jpg') }}" alt=""
+                                    src="{{ asset('web/assets/images/courses/courses_4.jpg') }}" alt=""
                                     class="img-fluid"></a></div>
                         <div class="purchase_price">
                             <a href="#" class="read_more-btn">250$</a>
@@ -124,7 +126,7 @@
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
                         <div class="courses_banner"><a href="#"><img
-                                    {{ asset('web/assets/images/courses/courses_5.jpg') }}" alt=""
+                                    src="{{ asset('web/assets/images/courses/courses_5.jpg') }}" alt=""
                                     class="img-fluid"></a></div>
                         <div class="purchase_price">
                             <a href="#" class="read_more-btn">180$</a>
@@ -151,7 +153,7 @@
                 <div class="single-courses">
                     <div class="courses_banner_wrapper">
                         <div class="courses_banner"><a href="#"><img
-                                    {{ asset('web/assets/images/courses/courses_6.jpg') }}" alt=""
+                                    src="{{ asset('web/assets/images/courses/courses_6.jpg') }}" alt=""
                                     class="img-fluid"></a></div>
                         <div class="purchase_price">
                             <a href="#" class="read_more-btn">130$</a>
