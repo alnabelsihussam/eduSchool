@@ -40,20 +40,29 @@
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
                         <li class="nav-item"><a href="#" class="nav-link active">Home</a>
                             <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="index-2.html" class="nav-link">Home Version 01</a>
+                                {{-- <li class="nav-item"><a href="index-2.html" class="nav-link">Home Version 01</a>
                                 </li>
                                 <li class="nav-item"><a href="index-3.html" class="nav-link">Home Version 02</a>
                                 </li>
                                 <li class="nav-item"><a href="index-4.html" class="nav-link">Home Version 03</a>
                                 </li>
                                 <li class="nav-item"><a href="index-5.html" class="nav-link">Home Version 04</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="course.html" class="nav-link">Courses</a>
                             <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="course.html" class="nav-link">Courses</a></li>
+                                <li class="nav-item"><a href="course.html" class="nav-link dropdown_icon">Courses
+                                        Category </a>
+                                    <ul class="navbar-nav nav mx-auto">
+                                        @foreach ($cats as $cat)
+                                            <li class="nav-item"><a href="#"
+                                                    class="nav-link">{{ $cat->name }}</a></li>
+                                        @endforeach
+
+                                    </ul>
+                                </li>
                                 <li class="nav-item"><a href="course-details.html" class="nav-link">Courses
                                         Details</a></li>
                             </ul>

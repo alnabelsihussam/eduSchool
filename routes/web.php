@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Cat;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('web.index');
-});
+Route::get('/', [HomeController::class,'index']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
