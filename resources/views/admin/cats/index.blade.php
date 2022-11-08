@@ -52,6 +52,8 @@
                                 <tr>
                                     <td>{{ $cat->id }}</td>
                                     <td>{{ $cat->name }}</td>
+                                    <td>{{ $cat->name }}</td>
+
                                     <td>
                                         @if ($cat->active == 1)
                                             {{ 'active' }}
