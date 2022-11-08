@@ -42,12 +42,12 @@
                                 <th>Name </th>
                                 <th>Status</th>
                                 <th>Create at</th>
-                                <<<<<<< HEAD <th colspan="2" class="text-center">Action</th>
+                                <th colspan="2" class="text-center">Action</th>
                             </tr>
-                            =======
+
                             <th colspan="2" class="text-center">Action</th>
                             </tr>
-                            >>>>>>> 7a4c9a47686a40be7070294f8d16ad31dbfe791e
+
                         </thead>
                         <tbody>
                             @forelse($cats as $cat)
