@@ -13,6 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
+
+        // مشان الزوار
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
