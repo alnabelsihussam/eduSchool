@@ -42,7 +42,8 @@
                                 <th>Name </th>
                                 <th>Status</th>
                                 <th>Create at</th>
-                                <th colspan="2" class="text-center">Action</th {{-- <th colspan="2" class="text-center">Action</th> --}} </tr>
+                                <th colspan="2" class="text-center">Action</th>
+                            </tr>
                         </thead>
                         <tbody>
                             @forelse($cats as $cat)
