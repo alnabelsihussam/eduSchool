@@ -16,4 +16,12 @@ class CatController extends Controller
     return view('web.index',compact('cats'));
 
     }
+
+    public function show($id){
+
+    $cat = Cat::findOrFail($id);
+
+    return view('web.cat.show',compact('cat'));
+
+    }
 }

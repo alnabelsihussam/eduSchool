@@ -2,6 +2,7 @@
 
 use App\Models\Cat;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\CatController;
 use App\Http\Controllers\Web\HomeController;
 
 /*
@@ -16,6 +17,9 @@ use App\Http\Controllers\Web\HomeController;
 */
 
 Route::get('/', [HomeController::class,'index']);
+
+
+Route::get('/cat/show/{id}',[CatController::class,'show'])->name('cat.show');
 
 
 Route::get('/dashboard', function () {

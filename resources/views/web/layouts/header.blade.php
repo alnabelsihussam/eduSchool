@@ -31,109 +31,16 @@
         </div>
     </div>
 
-    <div class="edu_nav">
-        <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="{{ asset('web/assets/images/logo2.png') }}"
-                        alt="logo"></a>
-                <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav lavalamp ml-auto menu">
-                        <li class="nav-item"><a href="#" class="nav-link active">Home</a>
-                            <ul class="navbar-nav nav mx-auto">
-                                {{-- <li class="nav-item"><a href="index-2.html" class="nav-link">Home Version 01</a>
-                                </li>
-                                <li class="nav-item"><a href="index-3.html" class="nav-link">Home Version 02</a>
-                                </li>
-                                <li class="nav-item"><a href="index-4.html" class="nav-link">Home Version 03</a>
-                                </li>
-                                <li class="nav-item"><a href="index-5.html" class="nav-link">Home Version 04</a>
-                                </li> --}}
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="course.html" class="nav-link">Courses</a>
-                            <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="course.html" class="nav-link dropdown_icon">Courses
-                                        Category </a>
-                                    <ul class="navbar-nav nav mx-auto">
-                                        @foreach ($cats as $cat)
-                                            <li class="nav-item"><a href="#"
-                                                    class="nav-link">{{ $cat->name }}</a></li>
-                                        @endforeach
 
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="course-details.html" class="nav-link">Courses
-                                        Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a>
-                            <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="blog.html" class="nav-link">Blog List</a></li>
-                                <li class="nav-item"><a href="blog-2.html" class="nav-link">Blog Grid One</a>
-                                </li>
-                                <li class="nav-item"><a href="blog-3.html" class="nav-link">Blog Grid Two</a>
-                                </li>
-                                <li class="nav-item"><a href="blog-details.html" class="nav-link">Blog
-                                        Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link">Pages</a>
-                            <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="#" class="nav-link dropdown_icon">Courses</a>
-                                    <ul class="navbar-nav nav mx-auto">
-                                        <li class="nav-item"><a href="course.html" class="nav-link">Courses</a>
-                                        </li>
-                                        <li class="nav-item"><a href="course-details.html" class="nav-link">Courses
-                                                Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="#" class="nav-link dropdown_icon">Events</a>
-                                    <ul class="navbar-nav nav mx-auto">
-                                        <li class="nav-item"><a href="event.html" class="nav-link">Event</a></li>
-                                        <li class="nav-item"><a href="event-details.html" class="nav-link">Event
-                                                Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="#" class="nav-link dropdown_icon">Blog</a>
-                                    <ul class="navbar-nav nav mx-auto">
-                                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog List</a>
-                                        </li>
-                                        <li class="nav-item"><a href="blog-2.html" class="nav-link">Blog Grid
-                                                One</a></li>
-                                        <li class="nav-item"><a href="blog-3.html" class="nav-link">Blog Grid
-                                                Two</a></li>
-                                        <li class="nav-item"><a href="blog-details.html" class="nav-link">Blog
-                                                Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="become-a-teacher.html" class="nav-link">Become A
-                                        Teacher</a></li>
-                                <li class="nav-item"><a href="teacher-profile.html" class="nav-link">Teachers
-                                        Profile</a></li>
-                                <li class="nav-item"><a href="team.html" class="nav-link">Teachers Page</a></li>
-                                <li class="nav-item"><a href="forgot-password.html" class="nav-link">Forgot
-                                        Password</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="mr-auto search_area ">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><i class="search_btn flaticon-magnifier"></i>
-                            <div id="search">
-                                <button type="button" class="close">×</button>
-                                <form>
-                                    <input type="search" value="" placeholder="Search here...." required />
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav><!-- END NAVBAR -->
-        </div>
-    </div>
+    <!--==================
+       Navbar
+ ===================-->
+    <x-navbar></x-navbar>
+
+    <!--==================
+      end Navbar
+ ===================-->
+
 
 
     <!--==================
@@ -144,25 +51,24 @@
             <!-- BEGIN SLIDES LIST -->
             <ul>
                 <li data-index="rs-1706" data-transition="fade" data-slotamount="7" data-hideafterloop="0"
-                    data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                    data-masterspeed="1000" data-rotate="0" data-saveperformance="off" data-title="Slide"
-                    data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
-                    data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1000"
+                    data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2=""
+                    data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8=""
+                    data-param9="" data-param10="" data-description="">
 
                     <div class="slider-overlay"></div>
                     <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                     <!--  صورة الخلقية BACKGROUND IMAGE -->
 
-                    <img src="{{ asset('web/assets/images/banner/banner_2.jpg') }}" alt="Sky"
-                        class="rev-slidebg" data-bgposition="center center" data-bgfit="cover"
-                        data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <img src="{{ asset('web/assets/images/banner/banner_2.jpg') }}" alt="Sky" class="rev-slidebg"
+                        data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                        data-bgparallax="10" class="rev-slidebg" data-no-retina>
                     <!-- LAYER NR. 1 -->
                     <div class="tp-caption font-lora sfb tp-resizeme letter-space-5 h-p"
                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                         data-y="['middle','middle','middle','middle']" data-voffset="['-300','-280','-250','-200']"
-                        data-fontsize="['60','40','30','18']" data-lineheight="['70','80','70','70']"
-                        data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
-                        data-responsive_offset="on"
+                        data-fontsize="['60','40','30','18']" data-lineheight="['70','80','70','70']" data-width="none"
+                        data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
                         data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":400,"to":"o:1;","delay":100,"split":"chars","splitdelay":0.05,"ease":"Power3.easeInOut"},{"delay":"wait","speed":100,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
                         style="z-index: 7; color:#fff; font-family:'Rubik', sans-serif; max-width: auto; max-height: auto; white-space: nowrap; font-weight:500;">
                         The Goal Of Education Is The Advancement Of Knowledge
@@ -175,8 +81,8 @@
                         data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
                         data-responsive_offset="on"
                         data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
-                        data-paddingtop="[10,10,10,10]" data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]"
+                        data-paddingtop="[10,10,10,10]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]"
+                        data-paddingleft="[0,0,0,0]"
                         style="z-index: 5; font-family:'Roboto', sans-serif; font-weight: 700; white-space: nowrap;text-transform:left;">
                         Take Better Education From
                     </div>
