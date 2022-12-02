@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',50);
             $table->string('img');
-            //$table->file('video');
-
+           // $table->file('video');
             $table->boolean('active')->default(true);
             $table->foreignId('cat_id')->constrained()
             ->onDelete('cascade')->onUpdate('cascade');
