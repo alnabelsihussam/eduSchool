@@ -19,9 +19,15 @@ class CatController extends Controller
 
     public function show($id){
 
-    $cat = Cat::findOrFail($id);
+   // $cat = Cat::findOrFail($id);
+   // $cats = Cat::get();
+    //return view('web.cat.show',compact('cat','cats'));
 
-    return view('web.cat.show',compact('cat'));
+
+    $data['cat'] = Cat::findOrFail($id);
+    $data['cats'] = Cat::select('id','name')->get();
+    $data['skills'] = $data['cat']->skills()->paginate(6);
+    return view('web.cat.show')->with($data);
 
     }
 }
