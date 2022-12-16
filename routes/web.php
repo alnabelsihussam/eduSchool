@@ -3,7 +3,9 @@
 use App\Models\Cat;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\CatController;
+use App\Http\Controllers\web\ExamController;
 use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\web\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,13 @@ Route::get('/', [HomeController::class,'index']);
 
 
 Route::get('/cat/show/{id}',[CatController::class,'show'])->name('cat.show');
+
+
+Route::get('/skills/show/{id}',[SkillController::class,'show'])->name('skills.show');
+Route::get('/exams/show/{id}',[ExamController::class,'show'])->name('exams.show');
+Route::get('/exams/questions/{id}',[ExamController::class,'questions'])->name('exams.questions');
+
+
 
 
 Route::get('/dashboard', function () {

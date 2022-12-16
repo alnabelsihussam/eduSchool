@@ -7,7 +7,7 @@
 
 
     <!--  start header section-->
-    كل شيئ بتكرر معي نضعه هتا
+    <!-- كل شيئ بتكرر معي نضعه هتا.   -->
     <!--  start Navbar section-->
 
 

@@ -13,10 +13,10 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-8 col-lg-8">
                         <div class="intro_text">
-                            <h1>{{ $cat->name }}</h1>
+                            <h1>{{ $skill->name }}</h1>
                             <div class="pages_links">
                                 <a href="#" title="">Home</a>
-                                <a href="#" title="" class="active">{{ $cat->name }}</a>
+                                <a href="#" title="" class="active">{{ $skill->name }}</a>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="row">
 
-                    @foreach ($skills as $skill)
+                    @foreach ($skill->exams as $exam)
                         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="single-courses">
                                 <div class="courses_banner_wrapper">
@@ -56,7 +56,7 @@
                                 <div class="courses_info_wrapper">
                                     <div class="courses_title">
                                         <h3>
-                                            <a href="{{ route('skills.show', $skill->id) }}"> {{ $skill->name }} </a>
+                                            <a href="{{ route('exams.show', $exam->id) }}"> {{ $exam->name }} </a>
                                         </h3>
                                         <div class="teachers_name">
                                             Teacher - <a href="#" title="">Jhonthan Smith</a>
@@ -65,13 +65,13 @@
                                     <div class="courses_info">
                                         <ul class="list-unstyled">
                                             <li>
-                                                <i class="fas fa-user"></i> {{ $skill->getStduentsCount() }}
+                                                <i class="fas fa-user"></i> {{ $exam->users()->count() }}
                                                 Students
                                             </li>
                                             <li>
                                                 <i class="fas fa-calendar-alt"></i>
                                                 <span>
-                                                    {{ Carbon\Carbon::parse($skill->created_at)->format('d M, Y') }}
+                                                    {{ Carbon\Carbon::parse($exam->created_at)->format('d M, Y') }}
                                                 </span>
 
                                             </li>
@@ -98,7 +98,7 @@
                                 </ul>
                             </div> --}}
 
-                {{ $skills->links() }}
+                {{-- {{ $skills->links() }} --}}
 
 
             </div>
