@@ -27,11 +27,6 @@
     <!-- End Header -->
 
     <section class="blog_wrapper" id="courses_details_wrapper">
-        {{-- <div class="container">
-            <div class="row"> --}}
-        {{-- <div class="col-12 col-sm-12 col-md-8 col-lg-8"> --}}
-
-
         <!--Start Courses Area Section-->
         <div class="popular_courses" id="popular_courses_page">
             <div class="container">
@@ -80,67 +75,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     @endforeach
-
-
-                    <!-- Ends: .single courses -->
                 </div>
-                <!-- Ends: . -->
-
-
-                {{-- <div class="pagination_blog">
-                                <ul>
-                                    <li><a href="#">1</a></li>
-                                    <li class="current"><a href="#">2</a></li>
-                                    <li>
-                                        <a href="#" class=""><i class="flaticon-right-arrow"></i></a>
-                                    </li>
-                                </ul>
-                            </div> --}}
-
-                {{-- {{ $skills->links() }} --}}
-
-
             </div>
-            {{-- </div> --}}
         </div>
-        <!-- ./ End Courses Area section *************************-->
-
-
-        </div>
-        <!--End Blog Siderbar Left-->
-
-
-        {{-- <div class="col-12 col-sm-12 col-md-4 col-lg-4 blog_wrapper_right ">
-        <div class="blog-right-items">
-            <div class="courses_features widget_single">
-                <div class="items-title">
-                    <h3 class="title">Courses Features</h3>
-                </div>
-                <div class="features_items">
-                    <ul class="list-unstyled">
-                        @foreach ($cats as $cat)
-                            <li><a href="{{ route('cat.show', $cat->id) }}" title=""><i class="flaticon-page"></i>
-                                    {{ $cat->name }}
-                                </a><span>{{ $cat->skills()->count() }}</span></li>
-                        @endforeach
-
-
-                    </ul>
-                </div>
-
-                <img src="{{ asset('web/assets/images/banner/testimonial_2_shpe_2.png') }}" alt=""
-                    class="courses_feaures_shpe">
-            </div>
-
-
-        </div>
-    </div>  --}}
-
-
-        <!-- End Right Sidebar-->
-
-        {{-- </div> --}}
-        {{-- </div> --}}
     </section><!-- ./ End  Blog Wrapper-->
 @endsection
