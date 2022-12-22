@@ -33,22 +33,15 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="footer_single_col contact">
-                        <h3>Contact Us</h3>
-                        <p>Ante amet vitae vulputate odio nulla vel pretium aenean.</p>
-                        <div class="contact_info">
-                            <span>+000 124 325</span>
-                            <span class="email">info@yourdomain.com</span>
-                        </div>
-                        <ul class="social_items d-flex list-unstyled">
-                            <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+
+
+                <!-- social media  -->
+                <x-social-links></x-social-links>
+
+
+
+
+
                 <div class="col-12 col-md-12 col-lg-12">
                     <div class="copyright">
                         <a target="_blank" href="">Zaid Bildungsung Kulturzentrum</a>
