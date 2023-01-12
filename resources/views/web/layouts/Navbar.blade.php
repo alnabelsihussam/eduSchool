@@ -16,14 +16,29 @@
                             </ul>
                         </div>
                         <div class="login_info">
-                            <ul class="d-flex">
-                                <li class="nav-item"><a href="#" class="nav-link sign-in js-modal-show"><i
-                                            class="flaticon-user-male-black-shape-with-plus-sign"></i>Sign Up</a>
-                                </li>
-                                <li class="nav-item"><a href="#" class="nav-link join_now js-modal-show"><i
-                                            class="flaticon-padlock"></i>Lon In</a></li>
-                            </ul>
-                            <a href="#" title="" class="apply_btn">Apply Now</a>
+                            @guest
+
+
+                                <ul class="d-flex">
+                                    <li class="nav-item"><a href="{{ url('register') }}"
+                                            class="nav-link sign-in js-modal-show"><i
+                                                class="flaticon-user-male-black-shape-with-plus-sign"></i>Sign Up</a>
+                                    </li>
+                                    <li class="nav-item"><a href="{{ url('login') }}"
+                                            class="nav-link join_now js-modal-show"><i class="flaticon-padlock"></i>Log
+                                            In</a></li>
+                                </ul>
+                            @endguest
+
+                            @auth
+
+
+                                <form action="{{ url('logout') }}" method="POST">
+                                    @csrf
+                                    <input type="submit" class="apply_btn" value="logout" />
+
+                                </form>
+                            @endauth
                         </div>
                     </div>
                 </div>
@@ -107,31 +122,43 @@
                             <!--/.Panel 1-->
                             <!--Panel 2-->
                             <div class="tab-pane fade" id="panel2" role="tabpanel">
-                                <form action="#" class="register">
-                                    <div class="row">
+                                <form method="POST" action="{{ url('register') }}">
+                                    @csrf
+                                    <div class="row ">
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label class="control-label">Name</label>
-                                                <input type="text" class="form-control" placeholder="Username">
+                                                <input type="text" class="form-control" name="name"
+                                                    placeholder="Username">
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label class="control-label">Email</label>
-                                                <input type="email" class="form-control" placeholder="Email">
+                                                <input type="email" name="email" class="form-control"
+                                                    placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label class="control-label">Password</label>
-                                                <input type="password" class="form-control" placeholder="Password">
+                                                <input type="password" class="form-control" name="password"
+                                                    placeholder="Password">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-12 col-md-12 col-lg-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Comfirm Password</label>
+                                                <input type="password" class="form-control" name="comfirm_password"
+                                                    placeholder="Password_comfirm">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div
                                             class="col-12 col-lg-12 col-md-12 col-lg-12 d-flex justify-content-between login_option">
-                                            <button type="submit" class="btn btn-default login_btn">Register</button>
+                                            <button type="submit" name="submit"
+                                                class="btn btn-default login_btn">Register</button>
                                         </div>
                                     </div>
                                 </form>

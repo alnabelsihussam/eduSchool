@@ -36,7 +36,7 @@
 
 
                 <!-- social media  -->
-                <x-social-links></x-social-links>
+                {{-- <x-social-links></x-social-links> --}}
 
 
 

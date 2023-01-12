@@ -21,9 +21,7 @@ use App\Http\Controllers\web\SkillController;
 
 Route::get('/', [HomeController::class,'index']);
 
-
 Route::get('/cat/show/{id}',[CatController::class,'show'])->name('cat.show');
-
 
 Route::get('/skills/show/{id}',[SkillController::class,'show'])->name('skills.show');
 Route::get('/exams/show/{id}',[ExamController::class,'show'])->name('exams.show');
@@ -31,11 +29,7 @@ Route::get('/exams/questions/{id}',[ExamController::class,'questions'])->name('e
 Route::get('/contact',[ContactController::class,'index'])->name('contact.create');
 Route::post('/contact/message',[ContactController::class,'send'])->name('contact.store');
 
+// Route::get('/dashboard', function () {
+ //   return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-require __DIR__.'/auth.php';
