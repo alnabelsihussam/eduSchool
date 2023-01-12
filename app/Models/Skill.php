@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Video;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Skill extends Model
 {
@@ -16,6 +17,10 @@ class Skill extends Model
 
     public function exams(){
         return $this->hasMany(Exam::class);
+    }
+
+     public function videos(){
+        return $this->hasMany(Video::class);
     }
 
      public function getStduentsCount(){
